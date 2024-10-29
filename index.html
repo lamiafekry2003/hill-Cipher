@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hill Cipher</title>
+</head>
+<body class="overflow-hidden">
+     <!-- alert -->
+     <div id="alert" class="p-4 mb-4 hidden Danger absolute -top-24 -right-full transition-all duration-300 text-sm text-red-500 rounded-xl bg-red-50 font-normal" role="alert">
+        <span class="font-semibold mr-2">Danger</span>Please Fill Key and Text
+    </div>
+        <div id="success" class="p-4 mb-4  hidden absolute -top-24 -right-full transition-all duration-300 text-sm  text-emerald-500 rounded-xl bg-emerald-50 font-normal" role="alert">
+            <span class="font-semibold mr-2">Success</span> encryption text  is successful
+            </div>
+    <div class=" flex justify-center items-center flex-col gap-5 mt-32 relative ">
+       <div class="bg-stone-600/[.6] rounded-lg mx-9 md:mx-12 px-5 sm:px-9 py-12 shadow-lg">
+        <h1 class="text-3xl md:text-6xl  mb-6 text-orange-100 font-bold">Hill Cipher </h1>
+        <div class="input-container flex flex-col my-12 py-2  relative">
+            <input type="text" id="key" placeholder="Enter 4-digit Key (e.g., 1234)" maxlength="4" class=" outline-0 text-yellow-50 bg-transparent text-lg sm:text-xl md:text-2xl border-b-2 border-b-yellow-50">
+            <label for="key" class="absolute top-0 left-0 text-sm text-yellow-50 ">KEY</label>
+        </div>
+
+        <div class="input-container flex flex-col py-2 relative">
+            <input type="text" id="plaintext" placeholder="Enter Plaintext" maxlength="4"   class="outline-0 bg-transparent border-b-2 text-lg sm:text-xl md:text-2xl text-yellow-50 border-b-yellow-50">
+            <label for="text" class="absolute top-0 left-0 text-sm text-yellow-50">Text</label>
+        </div>
+        <button id="encryptBtn" class="cli bg-stone-600 uppercase tracking-widest text-white hover:text-stone-600 hover:bg-white font-bold w-80 px-9 py-3 mt-12 rounded-lg shadow-lg">encryption</button>
+        <button id="decryptBtn" class="cli bg-stone-600 uppercase tracking-widest text-white hover:text-stone-600 hover:bg-white font-bold w-80 px-9 py-3 mt-12 rounded-lg shadow-lg">Decryption</button>
+
+        <h2 id="result" class="text-orange-100 text-3xl text-left mt-6 "> </h2>
+    </div>
+       </div>
+
+    <!-- <div class="container">
+        <h1>Hill Cipher Encryption & Decryption</h1>
+        <div class="input-group">
+            <input type="text" id="key" placeholder="Enter 4-digit Key (e.g., 1234)" maxlength="4">
+        </div>
+        <div class="input-group">
+            <input type="text" id="plaintext" placeholder="Enter Plaintext" maxlength="4">
+        </div>
+        <button id="encryptBtn">Encrypt</button>
+        <button id="decryptBtn">Decrypt</button>
+        <h2 id="result"></h2>
+    </div> -->
+
+    <script src="./hill.js"></script>
+</body>
+</html>

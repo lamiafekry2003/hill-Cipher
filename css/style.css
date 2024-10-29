@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-image: url('../images/digital-8280790_1280.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+input, button {
+    padding: 10px;
+    margin: 10px;
+}
+.input-container label {
+    display: none;
+    /* transform: translateY(-10px); */
+    transition: all 2s ease-out;
+    transform: scale(1.5)
+}
+
+.input-container input:focus + label {
+    display: block;
+    transform: translateY(-10px);
+    opacity: 0.5;
+}
+.input-container input::placeholder {
+    color: #fff8e8;
+}
+.input-container input:focus::placeholder {
+    opacity: 0;
+}
+::selection{
+    background-color: #FFF8E8;
+    color: #674636;
+}
+@keyframes slideIn {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 1rem; /* Adjust the final position based on your layout */
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 0.3s forwards;
+  }
